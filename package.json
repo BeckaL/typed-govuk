@@ -1,6 +1,8 @@
 {
   "dependencies": {
     "json-schema-to-typescript": "^11.0.2",
+    "koa": "^2.13.4",
+    "koa-router": "^12.0.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "typescript": "^4.9.3"
@@ -9,6 +11,6 @@
   "scripts": {
     "compile-schema": "node compile-schema.js",
     "compile": "tsc --jsx react --moduleResolution node --module es2022 index.tsx",
-    "run": "node index.js "
+    "start": "node index.js "
   }
 }
