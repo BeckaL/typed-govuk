@@ -10,7 +10,7 @@
   "type": "module",
   "scripts": {
     "compile-schema": "node compile-schema.js",
-    "compile": "tsc --jsx react --moduleResolution node --module es2022 index.tsx",
-    "start": "node index.js "
+    "compile": "tsc --jsx react --moduleResolution node --module es2022 app.ts",
+    "start": "node app.js "
   }
 }
