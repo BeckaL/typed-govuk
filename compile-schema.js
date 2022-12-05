@@ -1,7 +1,15 @@
 import { compileFromFile } from 'json-schema-to-typescript';
 import { writeFileSync } from 'fs';
 
+const schemaNames = [
+    'topical-event',
+    'case-study'
+]
+
 // compile from file
-compileFromFile('./schemas/topical-event-schema.json')
-    .then(ts => writeFileSync('./schemas/compiled/topical-event.d.ts', ts))
+schemaNames.forEach(name => {
+    const fileName = `./schemas/${name}-schema.json`
+    const writeTo = `./schemas/compiled/${name}.d.ts`
+    compileFromFile(fileName).then(ts => writeFileSync(writeTo, ts))
+})
 
