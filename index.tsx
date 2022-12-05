@@ -1,5 +1,5 @@
 import * as React from 'react'
-import { Schema as TopicalEventSchema } from './topical-event'
+import { TopicalEventSchema } from './schemas/compiled/topical-event'
 import { renderToStaticMarkup } from "react-dom/server";
 import Koa from 'koa';
 import KoaRouter from 'koa-router';
