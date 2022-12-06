@@ -1,6 +1,6 @@
 import * as React from 'react'
-import { TopicalEventSchema } from './schemas/compiled/topical-event'
-import { CaseStudySchema} from './schemas/compiled/case-study'
+import { Schema as TopicalEventSchema } from './compiled-schemas/topical_event'
+import { Schema as CaseStudySchema} from './compiled-schemas/case_study'
 import { renderToStaticMarkup } from "react-dom/server";
 
 export const renderTopicalEvent = (contentItem: TopicalEventSchema) => {
