@@ -3,6 +3,7 @@ import { title } from "./components/title.js"
 import * as React from 'react'
 import { renderPage } from './renderPage.js';
 import { renderGovspeakElem } from './components/govspeak.js'
+import { renderFigure } from './components/figure.js'
 
 export const renderSpeech = (contentItem: SpeechSchema) => {
   return renderPage((
@@ -14,6 +15,7 @@ export const renderSpeech = (contentItem: SpeechSchema) => {
         <div class="govuk-grid-column-two-thirds">
           <div class="content-bottom-margin"></div>
             <div class="responsive-bottom-margin">
+                { image(contentItem)}
                 {renderGovspeakElem(contentItem.details.body)}
             </div>
           </div>
@@ -21,6 +23,12 @@ export const renderSpeech = (contentItem: SpeechSchema) => {
       </div>
   ))
 }
+
+const image = (contentItem: SpeechSchema) => {
+    if (contentItem.details.image) {
+        return renderFigure(contentItem.details.image.url, contentItem.details.image.alt_text, contentItem.details.image.caption, contentItem.details.image.credit)
+    }
+} 
 
 
 //TODO move somewhere shared
