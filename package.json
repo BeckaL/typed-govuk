@@ -3,13 +3,14 @@
     "koa": "^2.13.4",
     "koa-router": "^12.0.0",
     "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react-dom": "^18.2.0",
+    "yaml": "^2.1.3"
   },
   "type": "module",
   "scripts": {
     "compile-schema": "node compile-schema.js",
-    "compile": "tsc --jsx react --moduleResolution node --module es2022 app.ts",
-    "start": "node app.js "
+    "compile": "tsc --p .",
+    "start": "node ./ts-built/app.js "
   },
   "devDependencies": {
     "@types/koa": "^2.13.5",

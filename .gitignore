@@ -2,3 +2,5 @@
 /index.js
 /compiled-schemas
 /renderers/*.js
+/renderers/components/*.js
+/ts-built/
