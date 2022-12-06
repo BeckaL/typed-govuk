@@ -1,8 +1,8 @@
 import * as React from 'react'
 
 import { renderTopicalEvent } from './renderers/topical-event.js';
-import { CaseStudySchema} from './schemas/compiled/case-study'
-import { TopicalEventSchema } from './schemas/compiled/topical-event';
+import { Schema as CaseStudySchema} from './compiled-schemas/case_study'
+import { Schema as TopicalEventSchema } from './compiled-schemas/topical_event';
 import { renderPage } from "./renderers/renderPage.js"
 
 
