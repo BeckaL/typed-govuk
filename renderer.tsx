@@ -29,7 +29,7 @@ export const renderCaseStudy = (contentItem: CaseStudySchema) => {
 export const renderIndex = () => {
   return renderPage(
       <div>
-        <h1>Have a look at some example rendered schemas:</h1>
+        <h1 className="govuk-heading-xl">Have a look at some example rendered schemas:</h1>
         <p><a href='/government/topical-events/budget-2021'>Topical event</a></p>
         <p><a href='/government/case-studies/smartsurvey-working-with-department-for-education'>Case study</a></p>
       </div>

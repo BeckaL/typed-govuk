@@ -8,6 +8,6 @@ export const title = (t: String) => {
     const inverse = false
 
     return <div className="gem-c-title govuk-!-margin-top-8 govuk-!-margin-bottom-8">
-               <h1 className="govuk-caption-xl gem-c-title__text">{t}</h1>
+               <h1 className="govuk-heading-xl gem-c-title__text">{t}</h1>
            </div>
 }

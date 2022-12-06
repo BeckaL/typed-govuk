@@ -10,7 +10,7 @@ export const header = () => {
     const search_text = "Search GOV.UK"
 
     
-    return <header role="banner" className="gem-c-layout-super-navigation-header" data-module="gem-track-click ga4-event-tracker" data-track-links-only data-ga4-expandable>
+    return <><header role="banner" className="gem-c-layout-super-navigation-header" data-module="gem-track-click ga4-event-tracker" data-track-links-only data-ga4-expandable>
             <div className="gem-c-layout-super-navigation-header__container govuk-width-container govuk-clearfix">
                 <div className="gem-c-layout-super-navigation-header__header-logo">
                   <a
@@ -162,5 +162,7 @@ export const header = () => {
             </nav>
         </div>
     </header>
+    <div className="gem-c-layout-for-public__blue-bar govuk-width-container"></div>
+    </>
 }          
           

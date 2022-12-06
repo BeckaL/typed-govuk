@@ -18,11 +18,13 @@ const getNavLinks = (): NavigationLink[] => {
 }
 
 export const footer = () => {
-    return <div className="govuk-width-container">
-               <div className="govuk-footer__navigation" data-module="gem-track-click" data-track-links-only>
-                   { navigationLinksDiv( getNavLinks()) }
-               </div>
-           </div>
+    return <footer className="gem-c-layout-footer govuk-footer gem-c-layout-footer--border">
+        <div className="govuk-width-container">
+            <div className="govuk-footer__navigation" data-module="gem-track-click" data-track-links-only>
+                { navigationLinksDiv( getNavLinks()) }
+            </div>
+        </div>
+    </footer>
 }
 
 const navigationLinksDiv = (links: NavigationLink[]) => {
@@ -32,7 +34,7 @@ const navigationLinksDiv = (links: NavigationLink[]) => {
             <ul className={ listClasses(columnNo(l.label)) }>
                 { l.menu_contents.map( (i: Item ) => 
                     <li className="govuk-footer__list-item">
-                        <a href={ i.href }>{ i.label }</a>
+                        <a href={ i.href } className="govuk-footer__link">{ i.label }</a>
                     </li>
                 ) }
             </ul>
