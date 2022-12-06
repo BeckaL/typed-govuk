@@ -1,4 +1,4 @@
-import { TopicalEventSchema } from '../schemas/compiled/topical-event'
+import { Schema as TopicalEventSchema } from '../compiled-schemas/topical_event'
 import { title } from "./components/title.js"
 import * as React from 'react'
 import { renderPage } from './renderPage.js';
