@@ -1,3 +1,4 @@
 /node_modules
 /index.js
-/compiled-schemas
+/schemas/compiled/
+/renderers/*.js
