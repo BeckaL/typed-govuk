@@ -1,0 +1,3 @@
+[submodule "publishing-api"]
+	path = publishing-api
+	url = https://github.com/alphagov/publishing-api.git
