@@ -24,7 +24,6 @@ const creditElem = (credit?: string) => {
     if (credit) {
         return <p className="app-c-figure__figcaption-credi">{credit}</p>
     } else {
-        //work out how to not return elem here
-        return <p/>
+        return <></>
     }
 }
