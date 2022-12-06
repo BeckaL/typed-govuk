@@ -8,6 +8,7 @@
       "esModuleInterop": true,
       "jsx": "react",
       "moduleResolution": "Node",
-      "module": "ES2022"
+      "module": "ES2022",
+      "outDir": "ts-built"
     }
   }
