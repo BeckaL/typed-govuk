@@ -14,6 +14,8 @@ router.get('/', (ctx) => {
     return renderBasedOnSchema(`/world/${ctx.params.location}/news`).then(html => {ctx.body = html})
 }).get('/government/case-studies/:case_study_name', (ctx) => {
     return renderBasedOnSchema(`/government/case-studies/${ctx.params.case_study_name}`).then(html => {ctx.body = html})
+}).get('/government/speeches/:speech_name', (ctx) => {
+    return renderBasedOnSchema(`/government/speeches/${ctx.params.speech_name}`).then(html => {ctx.body = html})
 });
 
 app.use(router.routes())

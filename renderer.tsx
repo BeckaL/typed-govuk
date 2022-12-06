@@ -1,8 +1,10 @@
 import * as React from 'react'
 
 import { renderTopicalEvent } from './renderers/topical-event.js';
+import { renderSpeech } from './renderers/speech.js';
 import { Schema as CaseStudySchema} from './compiled-schemas/case_study'
 import { Schema as TopicalEventSchema } from './compiled-schemas/topical_event';
+import { Schema as SpeechSchema } from './compiled-schemas/speech';
 import { renderPage } from "./renderers/renderPage.js"
 
 
@@ -39,7 +41,8 @@ export const renderBasedOnSchema = async (path: String) => {
   const schemaName = json["schema_name"]
   const schemaNamesToRenderFunctions = {
       "topical_event": renderTopicalEvent(json as TopicalEventSchema),
-      "case_study": renderCaseStudy(json as CaseStudySchema)
+      "case_study": renderCaseStudy(json as CaseStudySchema),
+      "speech": renderSpeech(json as SpeechSchema)
   };  
   if (schemaName in schemaNamesToRenderFunctions) { return schemaNamesToRenderFunctions[schemaName] } else { return renderNotFound(schemaName) }
 }
