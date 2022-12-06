@@ -1,19 +1,13 @@
 import * as React from 'react'
-import { TopicalEventSchema } from './schemas/compiled/topical-event'
+import { renderTopicalEvent } from './renderers/topical-event.js';
 import { CaseStudySchema} from './schemas/compiled/case-study'
-import { renderToStaticMarkup } from "react-dom/server";
+import { TopicalEventSchema } from './schemas/compiled/topical-event';
+import { renderPage } from "./renderers/renderPage.js"
 
-export const renderTopicalEvent = (contentItem: TopicalEventSchema) => {
-    return renderToStaticMarkup(
-        <div>
-          <h1>{contentItem.title}</h1>
-          <p>Updated at: {contentItem.public_updated_at}</p>
-        </div>
-    )
-}
+
 
 export const renderNotFound = (schemaName: String) => {
-    return renderToStaticMarkup(
+    return renderPage(
         <div>
           <p>Schema {schemaName} not found</p>
         </div>
@@ -21,7 +15,7 @@ export const renderNotFound = (schemaName: String) => {
 }
 
 export const renderCaseStudy = (contentItem: CaseStudySchema) => {
-    return renderToStaticMarkup(
+    return renderPage(
         <div>
           <h1>{contentItem.title}</h1>
           <p>Updated at: {contentItem.public_updated_at}</p>
@@ -30,7 +24,7 @@ export const renderCaseStudy = (contentItem: CaseStudySchema) => {
 }
 
 export const renderIndex = () => {
-  return renderToStaticMarkup(
+  return renderPage(
       <div>
         <h1>Have a look at some example rendered schemas:</h1>
         <p><a href='/government/topical-events/budget-2021'>Topical event</a></p>

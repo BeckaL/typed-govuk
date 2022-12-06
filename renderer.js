@@ -35,30 +35,24 @@ var __generator = (this && this.__generator) || function (thisArg, body) {
     }
 };
 import * as React from 'react';
-import { renderToStaticMarkup } from "react-dom/server";
-export var renderTopicalEvent = function (contentItem) {
-    return renderToStaticMarkup(React.createElement("div", null,
-        React.createElement("h1", null, contentItem.title),
-        React.createElement("p", null,
-            "Updated at: ",
-            contentItem.public_updated_at)));
-};
+import { renderTopicalEvent } from './renderers/topical-event.js';
+import { renderPage } from "./renderers/renderPage.js";
 export var renderNotFound = function (schemaName) {
-    return renderToStaticMarkup(React.createElement("div", null,
+    return renderPage(React.createElement("div", null,
         React.createElement("p", null,
             "Schema ",
             schemaName,
             " not found")));
 };
 export var renderCaseStudy = function (contentItem) {
-    return renderToStaticMarkup(React.createElement("div", null,
+    return renderPage(React.createElement("div", null,
         React.createElement("h1", null, contentItem.title),
         React.createElement("p", null,
             "Updated at: ",
             contentItem.public_updated_at)));
 };
 export var renderIndex = function () {
-    return renderToStaticMarkup(React.createElement("div", null,
+    return renderPage(React.createElement("div", null,
         React.createElement("h1", null, "Have a look at some example rendered schemas:"),
         React.createElement("p", null,
             React.createElement("a", { href: '/government/topical-events/budget-2021' }, "Topical event")),
