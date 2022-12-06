@@ -11,10 +11,10 @@ export const renderSpeech = (contentItem: SpeechSchema) => {
       {title(contentItem.title, toTitleCase(contentItem.document_type))}
       <div className = "gem-c-lead-paragraph"><p>{contentItem.title}</p></div>
 
-      <div class="govuk-grid-row">
-        <div class="govuk-grid-column-two-thirds">
-          <div class="content-bottom-margin"></div>
-            <div class="responsive-bottom-margin">
+      <div className="govuk-grid-row">
+        <div className="govuk-grid-column-two-thirds">
+          <div className="content-bottom-margin"></div>
+            <div className="responsive-bottom-margin">
                 { image(contentItem)}
                 {renderGovspeakElem(contentItem.details.body)}
             </div>

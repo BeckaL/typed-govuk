@@ -17,9 +17,9 @@ export const renderPage = (page) => {
               { header() }
               <div className="wrapper govuk-width-container">
                 <div className="gem-c-breadcrumbs govuk-breadcrumbs govuk-breadcrumbs--collapse-on-mobile" data-module="gem-track-click">
-                  <ol class="govuk-breadcrumbs__list">
-                        <li class="govuk-breadcrumbs__list-item">
-                          <a data-track-category="homeLinkClicked" data-track-action="homeBreadcrumb" data-track-label="" data-track-options="{}" class="govuk-breadcrumbs__link" href="/">Home</a>
+                  <ol className="govuk-breadcrumbs__list">
+                        <li className="govuk-breadcrumbs__list-item">
+                          <a data-track-category="homeLinkClicked" data-track-action="homeBreadcrumb" data-track-label="" data-track-options="{}" className="govuk-breadcrumbs__link" href="/">Home</a>
                         </li>
                   </ol>
                 </div>

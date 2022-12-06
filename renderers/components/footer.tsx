@@ -28,18 +28,18 @@ export const footer = () => {
 }
 
 const navigationLinksDiv = (links: NavigationLink[]) => {
-    return links.map( l => 
+    return React.Children.toArray(links.map( l => 
         <div className={ `${columnWidthClass(columnNo(l.label))}  govuk-!-display-none-print` }>
             <h2 className="govuk-footer__heading govuk-heading-m">{l.label}</h2>
             <ul className={ listClasses(columnNo(l.label)) }>
-                { l.menu_contents.map( (i: Item ) => 
+                { React.Children.toArray(l.menu_contents.map( (i: Item ) => 
                     <li className="govuk-footer__list-item">
                         <a href={ i.href } className="govuk-footer__link">{ i.label }</a>
                     </li>
-                ) }
+                )) }
             </ul>
         </div>
-        )
+    ))
 }
 
 const columnNo = (title: String): number => (title === "Topics")? 2 : 1
