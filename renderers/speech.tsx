@@ -10,7 +10,7 @@ export const renderSpeech = (contentItem: SpeechSchema, links: SpeechSchemaLinks
   return renderPage((
     <div>
       {title(contentItem.title, toTitleCase(contentItem.document_type))}
-      <div className="gem-c-lead-paragraph"><p>{contentItem.title}</p></div>
+      <div className="gem-c-lead-paragraph"><p>{contentItem.description}</p></div>
 
       {metadata(contentItem, links)}
 
