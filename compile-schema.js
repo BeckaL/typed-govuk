@@ -83,5 +83,10 @@ schemaNames.forEach(name => {
     const fileName = `./publishing-api/content_schemas/dist/formats/${name}/publisher_v2/schema.json`
     const writeTo = `./compiled-schemas/${name}.d.ts`
     compileFromFile(fileName).then(ts => writeFileSync(writeTo, ts))
+
+    const linksFile = `./publishing-api/content_schemas/dist/formats/${name}/publisher_v2/links.json`
+    const writeToLinks = `./compiled-schemas/links/${name}_links.d.ts`
+    compileFromFile(linksFile).then(ts => writeFileSync(writeToLinks, ts))
+
 })
 

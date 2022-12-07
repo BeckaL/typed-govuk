@@ -9,7 +9,7 @@
   },
   "type": "module",
   "scripts": {
-    "compile-schema": "node compile-schema.js",
+    "compile-schemas": "node compile-schema.js",
     "compile": "tsc --p .",
     "start": "node ./ts-built/app.js "
   },

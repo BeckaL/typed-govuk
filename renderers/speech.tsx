@@ -4,14 +4,15 @@ import * as React from 'react'
 import { renderPage } from './renderPage.js';
 import { renderGovspeakElem } from './components/govspeak.js'
 import { renderFigure } from './components/figure.js'
+import { Links as SpeechSchemaLinks } from '../compiled-schemas/links/speech_links';
 
-export const renderSpeech = (contentItem: SpeechSchema) => {
+export const renderSpeech = (contentItem: SpeechSchema, links: SpeechSchemaLinks) => {
   return renderPage((
     <div>
       {title(contentItem.title, toTitleCase(contentItem.document_type))}
       <div className="gem-c-lead-paragraph"><p>{contentItem.title}</p></div>
 
-      {metadata(contentItem)}
+      {metadata(contentItem, links)}
 
       <div className="govuk-grid-row">
         <div className="govuk-grid-column-two-thirds">
@@ -65,8 +66,8 @@ const image = (contentItem: SpeechSchema) => {
   }
 }
 
-//TODO: stop hardcoding this once we have links as links type
-const metadata = (contentItem: SpeechSchema) => {
+//TODO: can't really use links schema here - have to convert back to object which kind of defeats the... object
+const metadata = (contentItem: SpeechSchema, links: SpeechSchemaLinks) => {
   return <div className="govuk-grid-row">
     <div className="metadata-logo-wrapper">
       <div className="govuk-grid-column-two-thirds metadata-column">
@@ -74,7 +75,12 @@ const metadata = (contentItem: SpeechSchema) => {
           <dl >
             <dt className="gem-c-metadata__term">From:</dt>
             <dd className="gem-c-metadata__definition">
-              <a className="govuk-link" href="/government/organisations/department-for-transport">Department for Transport</a> and <a className="govuk-link" href="/government/people/huw-merriman">Huw Merriman MP</a>
+              <a className="govuk-link" 
+              href={(links.links.original_primary_publishing_organisation[0] as Object)["base_path"]}>
+                {(links.links.original_primary_publishing_organisation[0] as Object)["title"]}
+                </a> and <a className="govuk-link" href={(links.links.people[0] as Object)["base_path"]}>
+                {(links.links.people[0] as Object)["title"]}
+                  </a>
             </dd>
             <dt className="gem-c-metadata__term">Published</dt>
             <dd className="gem-c-metadata__definition">{displayableDate(contentItem.first_published_at)}</dd>
