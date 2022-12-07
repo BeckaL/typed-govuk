@@ -14,6 +14,7 @@ export const renderPage = (page) => {
                <link rel="stylesheet" href={applicationStylesheet} media="all"/>
                <link rel="stylesheet" href={collectionsStylesheet} media="all"/>
                <link rel="stylesheet" href={frontendStylesheet} media="all"/>
+               <script src="app/assets/javascripts/layout-super-navigation-header.js"></script>
              </head>
              <body className="gem-c-layout-for-public govuk-template__body">
               { header() }
