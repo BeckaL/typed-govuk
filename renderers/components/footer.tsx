@@ -1,21 +1,6 @@
 import * as React from 'react';
-import { parse } from 'yaml';
-import fs from 'fs';
 
-type Item = {
-    label: String,
-    href: String
-}
-
-type NavigationLink = {
-    label: String,
-    menu_contents: Item[]
-}
-
-const getNavLinks = (): NavigationLink[] => {
-    const file = fs.readFileSync('./data/en.yml', 'utf8');
-    return parse(file).en.components.layout_super_navigation_header.navigation_links as NavigationLink[]
-}
+import { NavigationLink, NavigationLinkItem, getNavLinks} from './NavigationLinks.js';
 
 export const footer = () => {
     return <footer className="gem-c-layout-footer govuk-footer gem-c-layout-footer--border">
@@ -32,7 +17,7 @@ const navigationLinksDiv = (links: NavigationLink[]) => {
         <div className={ `${columnWidthClass(columnNo(l.label))}  govuk-!-display-none-print` }>
             <h2 className="govuk-footer__heading govuk-heading-m">{l.label}</h2>
             <ul className={ listClasses(columnNo(l.label)) }>
-                { React.Children.toArray(l.menu_contents.map( (i: Item ) => 
+                { React.Children.toArray(l.menu_contents.map( (i: NavigationLinkItem ) => 
                     <li className="govuk-footer__list-item">
                         <a href={ i.href } className="govuk-footer__link">{ i.label }</a>
                     </li>
