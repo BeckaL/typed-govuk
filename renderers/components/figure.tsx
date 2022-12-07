@@ -15,8 +15,7 @@ const captionElem = (caption?: string) => {
     if (caption) {
         return <p className="app-c-figure__figcaption-text">{caption}</p>
     } else {
-        //work out how to not return elem here
-        return <p/>
+        return <></>
     }
 }
 
