@@ -5,16 +5,21 @@ import { renderPage } from './renderPage.js';
 import { renderGovspeakElem } from './components/govspeak.js'
 import { renderFigure } from './components/figure.js'
 import { Links as SpeechSchemaLinks } from '../compiled-schemas/links/speech_links';
+import { toTitleCase, displayableDate } from './utils.js'
 
 export const renderSpeech = (contentItem: SpeechSchema, links: SpeechSchemaLinks) => {
   return renderPage((
     <div>
-      {title(contentItem.title, toTitleCase(contentItem.document_type))}
-      <div className="gem-c-lead-paragraph"><p>{contentItem.description}</p></div>
+      { title(contentItem.title, toTitleCase(contentItem.document_type)) }
+      <div className="gem-c-lead-paragraph"><p>{ contentItem.description }</p></div>
+      { metadata(contentItem, links) }
+      { body(contentItem) }
+    </div>
+  ))
+}
 
-      {metadata(contentItem, links)}
-
-      <div className="govuk-grid-row">
+const body = (contentItem: SpeechSchema) => {
+  return (<div className="govuk-grid-row">
         <div className="govuk-grid-column-two-thirds">
           <div className="content-bottom-margin"></div>
           <div className="responsive-bottom-margin">
@@ -23,10 +28,8 @@ export const renderSpeech = (contentItem: SpeechSchema, links: SpeechSchemaLinks
             {renderGovspeakElem(contentItem.details.body)}
           </div>
         </div>
-      </div>
-    </div>
-  ))
-}
+      </div>)
+} 
 
 const locationAndDeliveredOn = (deliveredOn: string, location?: string) => {
   if (location != undefined) {
@@ -38,7 +41,6 @@ const locationAndDeliveredOn = (deliveredOn: string, location?: string) => {
         <dd className="app-c-important-metadata__definition">{displayableDate(deliveredOn)}</dd>
       </dl>
     </div>)
-
   } else {
     return (<div className="app-c-important-metadata app-c-important-metadata--bottom-margin">
       <dl className="app-c-important-metadata__list" data-module="gem-track-click" data-gem-track-click-module-started="true">
@@ -48,15 +50,6 @@ const locationAndDeliveredOn = (deliveredOn: string, location?: string) => {
     </div>)
   }
 }
-
-const displayableDate = (dateString: string) => {
-  const date = new Date(dateString)
-    return [
-      date.getDate(),
-      date.toLocaleString('default', { month: 'long' }),
-      date.getFullYear(),
-    ].join(' ');
-  }
 
 const image = (contentItem: SpeechSchema) => {
   if (contentItem.details.image) {
@@ -91,11 +84,4 @@ const metadata = (contentItem: SpeechSchema, links: SpeechSchemaLinks) => {
       </div>
     </div>
   </div>
-}
-
-
-//TODO move somewhere shared
-const toTitleCase = (s: String): String => {
-  return s.replace(/^[-_]*(.)/, (_, c) => c.toUpperCase())       // Initial char (after -/_)
-    .replace(/[-_]+(.)/g, (_, c) => ' ' + c.toUpperCase())
 }
