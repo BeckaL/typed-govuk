@@ -15,10 +15,10 @@ export const renderSpeech = (contentItem: SpeechSchema, links: SpeechSchemaLinks
 
   return renderPage((
     <div>
-        { titleAndDescription(contentItem.title, contentItem.document_type, contentItem.description as Description)}
-        { metadata(contentItem, links) }
-        { body(contentItem) }
-        { relatedTopics((contentItem)) }
+      {titleAndDescription(contentItem.title, contentItem.document_type, contentItem.description as Description)}
+      {metadata(contentItem, links)}
+      {body(contentItem)}
+      {relatedTopics((contentItem))}
     </div>
   ), breadcrumbs)
 }

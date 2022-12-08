@@ -3,6 +3,7 @@ import fs from 'fs';
 import { BreadcrumbLink } from '../model/BreadcrumbLink';
 import { Taxon } from '../model/Taxon';
 import { RootObject as EnTranslation, Navigationlink2 } from '../compiled-translations/en'
+import { RootObject as FrontendEnTranslation } from '../compiled-translations/frontend-en';
 
 export const toTitleCase = (s: String): String => {
   return s.replace(/^[-_]*(.)/, (_, c) => c.toUpperCase())       // Initial char (after -/_)
@@ -22,6 +23,11 @@ export const getNavLinks = () => {
   const file = fs.readFileSync('./data/en.yml', 'utf8');
   const translation = parse(file) as EnTranslation
   return translation.en.components.layout_super_navigation_header.navigation_links
+}
+
+export const getFrontendTranslations = (): FrontendEnTranslation => {
+  const file = fs.readFileSync('./data/frontend-en.yml', 'utf8');
+  return parse(file) as FrontendEnTranslation
 }
 
 export const taxonBreadcrumbs = (taxonTree: Taxon, breadcrumbs: BreadcrumbLink[] = [], i: number = 0): BreadcrumbLink[] => {

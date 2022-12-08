@@ -82,6 +82,7 @@ const schemaNames = [
 
 const translationNames = [
     "en",
+    "frontend-en"
 ]
 
 // compile from file
