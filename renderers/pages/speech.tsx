@@ -26,13 +26,14 @@ export const renderSpeech = (contentItem: SpeechSchema, links: SpeechSchemaLinks
 const body = (contentItem: SpeechSchema) => {
   return (<div className="govuk-grid-row">
     <div className="govuk-grid-column-two-thirds">
-      <div className="content-bottom-margin"></div>
-      <div className="responsive-bottom-margin">
-        { locationAndDeliveredOn(contentItem.details.delivered_on, contentItem.details.location) }
-        { image(contentItem) }
-        { renderGovspeakElem(contentItem.details.body) }
+      <div className="content-bottom-margin">
+        <div className="responsive-bottom-margin">
+          {locationAndDeliveredOn(contentItem.details.delivered_on, contentItem.details.location)}
+          {image(contentItem)}
+          {renderGovspeakElem(contentItem.details.body)}
+        </div>
+        <div className="app-c-published-dates" lang="en">Published {displayableDate(contentItem.details.delivered_on)}</div>
       </div>
-      <div className="app-c-published-dates" lang="en">Published {displayableDate(contentItem.details.delivered_on)}</div>
     </div>
   </div>)
 }
