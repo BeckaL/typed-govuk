@@ -1,5 +1,5 @@
-import { Schema as TopicalEventSchema } from '../../compiled-schemas/topical_event'
-import { title } from "../components/title.js"
+import { Description, Schema as TopicalEventSchema } from '../../compiled-schemas/topical_event'
+import { titleAndDescription } from "../components/title-and-description.js"
 import * as React from 'react'
 import { renderPage } from '../renderPage.js';
 import { toTitleCase } from '../utils.js'
@@ -7,8 +7,7 @@ import { toTitleCase } from '../utils.js'
 export const renderTopicalEvent = (contentItem: TopicalEventSchema) => {
   return renderPage((
     <div>
-      {title(contentItem.title, toTitleCase(contentItem.document_type))}
-      <p>Updated at: {contentItem.public_updated_at}</p>
+      { titleAndDescription(contentItem.title, contentItem.document_type, contentItem.description as Description) }
     </div>
   ))
 }

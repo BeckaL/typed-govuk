@@ -1,6 +1,5 @@
 import { header } from "./components/header.js"
 import { footer } from "./components/footer.js"
-import { title } from "./components/title.js"
 import * as React from 'react'
 import { renderToStaticMarkup } from "react-dom/server";
 
