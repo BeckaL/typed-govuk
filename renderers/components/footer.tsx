@@ -1,6 +1,6 @@
 import * as React from 'react';
-
-import { NavigationLink, NavigationLinkItem, getNavLinks} from './NavigationLinks.js';
+import { getNavLinks } from '../utils.js';
+import { NavigationLink, NavigationLinkItem } from '../../model/NavigationLinks.js';
 
 export const footer = () => {
     return <footer className="gem-c-layout-footer govuk-footer gem-c-layout-footer--border">

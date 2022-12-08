@@ -1,6 +1,6 @@
 import * as React from 'react'
-import { getNavLinks, NavigationLink, NavigationLinkItem } from './NavigationLinks.js'
-import { renderHeaderNavLinks } from './render_header_nav_links.js'
+import { getNavLinks } from '../utils.js'
+import { renderHeaderNavLinks } from './header-nav-links.js'
 
 export const header = () => {
   const logo_link = "https://www.gov.uk/"

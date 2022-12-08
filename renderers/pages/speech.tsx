@@ -1,11 +1,11 @@
-import { Schema as SpeechSchema } from '../compiled-schemas/speech'
-import { title } from "./components/title.js"
+import { Schema as SpeechSchema } from '../../compiled-schemas/speech'
+import { title } from "../components/title.js"
 import * as React from 'react'
-import { renderPage } from './renderPage.js';
-import { renderGovspeakElem } from './components/govspeak.js'
-import { renderFigure } from './components/figure.js'
-import { Links as SpeechSchemaLinks } from '../compiled-schemas/links/speech_links';
-import { toTitleCase, displayableDate } from './utils.js'
+import { renderPage } from '../renderPage.js';
+import { renderGovspeakElem } from '../components/govspeak.js'
+import { renderFigure } from '../components/figure.js'
+import { Links as SpeechSchemaLinks } from '../../compiled-schemas/links/speech_links';
+import { toTitleCase, displayableDate } from '../utils.js'
 
 export const renderSpeech = (contentItem: SpeechSchema, links: SpeechSchemaLinks) => {
   return renderPage((

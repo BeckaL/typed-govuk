@@ -1,5 +1,5 @@
 import * as React from 'react'
-import { NavigationLink, NavigationLinkItem } from './NavigationLinks.js'
+import { NavigationLink, NavigationLinkItem } from '../../model/NavigationLinks.js'
 
 export const renderHeaderNavLinks = (navigationLinks: NavigationLink[]) => {
     return navigationLinks.map((link, index) => renderNavLink(link, index))
