@@ -15,7 +15,7 @@ const renderNavLink = (link: NavigationLink, index: number) => {
 
     return <li className={liClasses.join(" ")} key={index}>
         <div className="gem-c-layout-super-navigation-header__navigation-toggle-wrapper govuk-clearfix">
-            <a href={link.href} className="gem-c-layout-super-navigation-header__navigation-item-link">
+            <a href={link.href} className="gem-c-layout-super-navigation-header__navigation-item-link" hidden="hidden">
                 <span className="gem-c-layout-super-navigation-header__navigation-item-link-inner">{link.label}</span>
             </a>
             {renderInner(link, hasChildren, uniqueId)}
@@ -26,14 +26,18 @@ const renderNavLink = (link: NavigationLink, index: number) => {
 
 const renderInner = (link: NavigationLink, hasChildren: boolean, id: number) => {
     if (hasChildren) {
-        return (<button
-            className="gem-c-layout-super-navigation-header__navigation-second-toggle-button"
-            hidden={true} 
-            id={`super-navigation-menu__section-${id}-toggle`}
-            type="button"
-            aria-controls={`super-navigation-menu__section-${id}`}
-            aria-expanded="false"
-            aria-label={`Show ${link.label} menu`}>
+        return (
+            <button 
+            aria-controls={`super-navigation-menu__section-${id}`} 
+            aria-expanded="false" 
+            aria-label="Show Topics menu" 
+            className="gem-c-layout-super-navigation-header__navigation-second-toggle-button" 
+            data-text-for-hide={`Hide ${link.label} menu`}
+            data-text-for-show={`Show ${link.label} menu`}
+            data-toggle-desktop-group="top"
+            data-toggle-mobile-group="second" 
+            data-tracking-key="topics" 
+            id={`super-navigation-menu__section-${id}-toggle`} type="button">
             <span className="gem-c-layout-super-navigation-header__navigation-second-toggle-button-inner">{link.label}</span>
         </button>)
     } else {
@@ -67,3 +71,4 @@ const menuContents = (menuContents: NavigationLinkItem[]) => {
         </li>
         )
 }
+
