@@ -3,7 +3,7 @@ import * as React from 'react';
 export const feedback = () => {
     return <div className="govuk-width-container">
         <div className="gem-c-feedback govuk-!-display-none-print" data-module="feedback ga4-event-tracker" data-feedback-module-started="true" data-ga4-event-tracker-module-started="true">
-            <div className="gem-c-feedback__prompt gem-c-feedback__js-show js-prompt" tabindex="-1">
+            <div className="gem-c-feedback__prompt gem-c-feedback__js-show js-prompt" tabIndex="-1">
                 <div className="gem-c-feedback__prompt-content">
                     <div className="gem-c-feedback__prompt-questions js-prompt-questions">
                         <div className="gem-c-feedback__prompt-question-answer">

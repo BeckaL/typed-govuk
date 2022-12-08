@@ -5,10 +5,14 @@ import { renderPage } from '../renderPage.js';
 import { renderGovspeakElem } from '../components/govspeak.js'
 import { renderFigure } from '../components/figure.js'
 import { Links as SpeechSchemaLinks } from '../../compiled-schemas/links/speech_links';
-import { toTitleCase, displayableDate } from '../utils.js'
+import { displayableDate, taxonBreadcrumbs } from '../utils.js'
+import { Taxon } from '../../model/Taxon';
 import { Description } from '../../compiled-schemas/topical_event';
 
 export const renderSpeech = (contentItem: SpeechSchema, links: SpeechSchemaLinks) => {
+  const taxon = links.links!.taxons!.map(t => t as Object).map(o => o as Taxon)[0]
+  const breadcrumbs = taxonBreadcrumbs(taxon)
+
   return renderPage((
     <div>
         { titleAndDescription(contentItem.title, contentItem.document_type, contentItem.description as Description)}
@@ -16,7 +20,7 @@ export const renderSpeech = (contentItem: SpeechSchema, links: SpeechSchemaLinks
         { body(contentItem) }
         { relatedTopics((contentItem)) }
     </div>
-  ))
+  ), breadcrumbs)
 }
 
 const body = (contentItem: SpeechSchema) => {
