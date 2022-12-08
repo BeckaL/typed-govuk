@@ -17,9 +17,9 @@ const navigationLinksDiv = (links: Navigationlink2[]) => {
         <div className={ `${columnWidthClass(columnNo(l.label))}  govuk-!-display-none-print` }>
             <h2 className="govuk-footer__heading govuk-heading-m">{l.label}</h2>
             <ul className={ listClasses(columnNo(l.label)) }>
-                { React.Children.toArray(l.menu_contents.map(i => 
-                    <li className="govuk-footer__list-item">
-                        <a href={ i.href } className="govuk-footer__link">{ i.label }</a>
+                { React.Children.toArray(l.menu_contents.map((item, index) => 
+                    <li className="govuk-footer__list-item" key={index}>
+                        <a href={ item.href } className="govuk-footer__link">{ item.label }</a>
                     </li>
                 )) }
             </ul>

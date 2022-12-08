@@ -118,8 +118,8 @@ const relatedTopics = (links: SpeechSchemaLinks) => {
 }
 
 const relatedTaxons = (taxons: Object[]) => {
-  return taxons.map(taxonObject =>
-    <li className="gem-c-related-navigation__link">
+  return taxons.map((taxonObject, i) =>
+    <li className="gem-c-related-navigation__link" key={i}>
       <a
         className="govuk-link govuk-link gem-c-related-navigation__section-link govuk-link gem-c-related-navigation__section-link--footer"
         href={taxonObject["base_path"]}
