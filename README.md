@@ -8,9 +8,17 @@ This gives us type-safety upon rendering, and gives us access to the improved de
 
 ## Running the project locally
 
+Initialise the project:
+
+`$ npm install`
+
+`$ git submodule init`
+
+`$ git submodule update`
+
 Compile the schemas (needs to be done just once, unless a schema changes):
 
-`$ npm compile-schemas`
+`$ npm run compile-schemas`
 
 Compile the typescript and run:
 
