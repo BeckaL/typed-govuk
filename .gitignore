@@ -1,6 +1,5 @@
 /node_modules
 /index.js
-/compiled-schemas
 /compiled-translations
 /renderers/*.js
 /renderers/components/*.js
