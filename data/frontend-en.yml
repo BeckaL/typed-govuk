@@ -263,6 +263,9 @@ en:
       tax_tribunal_decision:
         one: Tax and Chancery tribunal decision
         other: Tax and Chancery tribunal decisions
+      topical_event:
+        one: Topical Event
+        other: Topical Events
       transcript:
         one: Transcript
         other: Transcripts
