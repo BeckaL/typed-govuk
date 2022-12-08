@@ -1,0 +1,494 @@
+---
+en:
+  common:
+    visit: 'Visit:'
+  components:
+    figure:
+      image_credit: 'Image credit: %{credit}'
+    print_link:
+      text: Print this page
+    published_dates:
+      hide_all_updates: hide all updates
+      last_updated: Last updated %{date}
+      published: Published %{date}
+      see_all_updates: see all updates
+      show_all_updates: show all updates
+    publisher_metadata:
+      hide_all: hide all
+      show_all: show all
+    share_links:
+      share_this_page: Share this page
+  consultation:
+    and: and
+    another_website_html: This consultation %{closed} held on <a href="%{url}">another website</a>
+    at: at
+    closes: It closes at
+    closes_at: This consultation closes at
+    complete_a: Complete a
+    description: Consultation description
+    detail_of_feedback_received: Detail of feedback received
+    detail_of_outcome: Detail of outcome
+    documents: Documents
+    download_outcome: Download the full outcome
+    either: either
+    email_to: 'Email to:'
+    feedback_received: Feedback received
+    is_being: is being
+    not_open_yet: This consultation isn't open yet
+    opens: This consultation opens
+    original_consultation: Original consultation
+    ran_from: This consultation ran from
+    respond_online: Respond online
+    visit_soon: Visit this page again soon to download the outcome to this public&nbsp;feedback.
+    was: was
+    ways_to_respond: Ways to respond
+    write_to: 'Write to:'
+  contact:
+    email: Email
+    find_call_charges: Find out about call charges
+    online: Online
+    phone: Phone
+    webchat: Webchat
+  content_item:
+    coming_soon: This document will be published on
+    contents: Contents
+    metadata:
+      published: Published
+      updated: Updated
+    schema_name:
+      aaib_report:
+        one: Air Accidents Investigation Branch report
+        other: Air Accidents Investigation Branch reports
+      announcement:
+        one: Announcement
+        other: Announcements
+      asylum_support_decision:
+        one: Asylum support tribunal decision
+        other: Asylum support tribunal decisions
+      authored_article:
+        one: Authored article
+        other: Authored articles
+      business_finance_support_scheme:
+        one: Business finance support scheme
+        other: Business finance support schemes
+      case_study:
+        one: Case study
+        other: Case studies
+      closed_consultation:
+        one: Closed consultation
+        other: Closed consultations
+      cma_case:
+        one: Competition and Markets Authority case
+        other: Competition and Markets Authority cases
+      coming_soon:
+        one: Coming Soon
+        other: Coming Soon
+      consultation:
+        one: Consultation
+        other: Consultations
+      consultation_outcome:
+        one: Consultation outcome
+        other: Consultation outcomes
+      corporate_information_page:
+        one: Information page
+        other: Information pages
+      corporate_report:
+        one: Corporate report
+        other: Corporate reports
+      correspondence:
+        one: Correspondence
+        other: Correspondences
+      countryside_stewardship_grant:
+        one: Countryside Stewardship grant
+        other: Countryside Stewardship grants
+      decision:
+        one: Decision
+        other: Decisions
+      detailed_guide:
+        one: Guidance
+        other: Guidance
+      dfid_research_output:
+        one: Research for Development Output
+        other: Research for Development Outputs
+      document_collection:
+        one: Collection
+        other: Collections
+      draft_text:
+        one: Draft text
+        other: Draft texts
+      drug_safety_update:
+        one: Drug Safety Update
+        other: Drug Safety Updates
+      employment_appeal_tribunal_decision:
+        one: Employment appeal tribunal decision
+        other: Employment appeal tribunal decisions
+      employment_tribunal_decision:
+        one: Employment tribunal decision
+        other: Employment tribunal decisions
+      esi_fund:
+        one: European Structural and Investment Fund (ESIF)
+        other: European Structural and Investment Funds (ESIF)
+      fatality_notice:
+        one: Fatality notice
+        other: Fatality notices
+      foi_release:
+        one: FOI release
+        other: FOI releases
+      form:
+        one: Form
+        other: Forms
+      government_response:
+        one: Government response
+        other: Government responses
+      guidance:
+        one: Guidance
+        other: Guidance
+      impact_assessment:
+        one: Impact assessment
+        other: Impact assessments
+      imported:
+        one: imported - awaiting type
+        other: imported - awaiting type
+      independent_report:
+        one: Independent report
+        other: Independent reports
+      international_development_fund:
+        one: International development funding
+        other: International development funding
+      international_treaty:
+        one: International treaty
+        other: International treaties
+      maib_report:
+        one: Marine Accident Investigation Branch report
+        other: Marine Accident Investigation Branch reports
+      map:
+        one: Map
+        other: Maps
+      medical_safety_alert:
+        one: Alerts and recalls for drugs and medical devices
+        other: Alerts and recalls for drugs and medical devices
+      national:
+        one: National statistics announcement
+        other: National statistics announcements
+      national_statistics:
+        one: National statistics
+        other: National statistics
+      national_statistics_announcement:
+        one: National statistics announcement
+        other: National statistics announcements
+      news_article:
+        one: News article
+        other: News articles
+      news_story:
+        one: News story
+        other: News stories
+      notice:
+        one: Notice
+        other: Notices
+      official:
+        one: Official statistics announcement
+        other: Official statistics announcements
+      official_statistics:
+        one: Official Statistics
+        other: Official statistics
+      official_statistics_announcement:
+        one: Official statistics announcement
+        other: Official statistics announcements
+      open_consultation:
+        one: Open consultation
+        other: Open consultations
+      oral_statement:
+        one: Oral statement to Parliament
+        other: Oral statements to Parliament
+      policy:
+        one: Policy
+        other: Policies
+      policy_paper:
+        one: Policy paper
+        other: Policy papers
+      press_release:
+        one: Press release
+        other: Press releases
+      product-safety-alert-report-recall:
+        one: Product Safety Alerts, Reports and Recalls
+        other: Product Safety Alerts, Reports and Recalls
+      promotional:
+        one: Promotional material
+        other: Promotional material
+      publication:
+        one: Publication
+        other: Publications
+      raib_report:
+        one: Rail Accident Investigation Branch report
+        other: Rail Accident Investigation Branch reports
+      regulation:
+        one: Regulation
+        other: Regulations
+      research:
+        one: Research and analysis
+        other: Research and analysis
+      residential_property_tribunal_decision:
+        one: Residential property tribunal decision
+        other: Residential property tribunal decisions
+      service_sign_in:
+        one: Service sign in
+        other: Service sign in
+      service_standard_report:
+        one: Service Standard Report
+        other: Service Standard Reports
+      speaking_notes:
+        one: Speaking notes
+        other: Speaking notes
+      speech:
+        one: Speech
+        other: Speeches
+      standard:
+        one: Standard
+        other: Standards
+      statement_to_parliament:
+        one: Statement to Parliament
+        other: Statements to Parliament
+      statistical_data_set:
+        one: Statistical data set
+        other: Statistical data sets
+      statistics_announcement:
+        one: Statistics release announcement
+        other: Statistics release announcements
+      statutory_guidance:
+        one: Statutory guidance
+        other: Statutory guidance
+      take_part:
+        one: Take part
+        other: Take part
+      tax_tribunal_decision:
+        one: Tax and Chancery tribunal decision
+        other: Tax and Chancery tribunal decisions
+      transcript:
+        one: Transcript
+        other: Transcripts
+      transparency:
+        one: Transparency data
+        other: Transparency data
+      utaac_decision:
+        one: Administrative appeals tribunal decision
+        other: Administrative appeals tribunal decisions
+      world_news_story:
+        one: World news story
+        other: World news stories
+      written_statement:
+        one: Written statement to Parliament
+        other: Written statements to Parliament
+  corporate_information_page:
+    about_our_services_html: Find out %{link}.
+    corporate_information: Corporate information
+    personal_information_charter_html: Our %{link} explains how we treat your personal information.
+    publication_scheme_html: Read about the types of information we routinely publish in our %{link}.
+    social_media_use_html: Read our policy on %{link}.
+    welsh_language_scheme_html: Find out about our commitment to %{link}.
+  email:
+    already_subscribed_title: You’re already getting emails about this page
+    description: See and manage all your GOV.UK email subscriptions
+    subscribe_title: You’ve subscribed to emails about this page
+    unsubscribe_title: You’ve unsubscribed from emails about this page
+  fatality_notice:
+    alt_text: Ministry of Defence crest
+    field_of_operation: Field of operation
+    operations_in: Operations in %{location}
+  get_involved:
+    civil_service: Civil Service
+    civil_service_quarterly: Civil Service Quarterly
+    closed: Closed
+    closed_consultations: Closed consultations in the past 12 months
+    closes: Closes
+    closing_today: Closing today
+    closing_tomorrow: Closing tomorrow
+    days_left: "%{number_of_days} days left"
+    engage_with_gov: Engage with government
+    fcdo_bloggers: FCDO blogs
+    follow: Follow a blog or social media channel
+    follow_links: Some active government blogs include
+    follow_paragraph: For an instant way to interact with government departments, try their social media streams. These are listed under 'Follow us' on the department's home page. As well as access to blogs, audio, video and more, you can comment, debate and rate.
+    gds_blog: Government Digital Service
+    gov_past: History of Government
+    intro_paragraph:
+      body_html: Find out how you can %{engage_with_government} directly, and %{take_part} locally, nationally or internationally.
+      engage_with_government: engage with government
+      take_part: take part
+    join_ics: Join the International Citizen Service (18- to 25-year-olds)
+    make_donation: Make a donation to charity
+    more_ways: More ways to take part
+    neighbourhood_watch: Take part in your local Neighbourhood Watch
+    open_consultations: Open consultations
+    page_heading: Get Involved
+    page_title: Get Involved
+    petition_paragraph:
+      body_html: You can %{create_a_petition} to influence government and Parliament. If the petition gets at least 100,000 online signatures, it will be considered for debate in the House of Commons.
+      create_a_petition: create a petition
+    read_respond: Read and respond
+    recent_outcomes: Recent outcomes
+    recently_opened: Recently opened
+    respond_to_consultations: Respond to consultations
+    school_overseas: Link up with a school overseas
+    search_all: Search all consultations
+    see_all_dept: See all government departments
+    start_a_petition: Start a petition
+    take_part: Take part
+    take_part_suggestions: Many people are already volunteering, donating and contributing, both in the UK and abroad. If you'd like to join them, but dont know where to start, here's a list of suggestions
+    your_views: You can give your views on new or changing government policies by responding to consultations. Government departments take these responses into consideration before making decisions.
+  gone:
+    page_title: No longer available
+    published_in_error: The information on this page has been removed because it was published in error.
+    title: The page you're looking for is no longer available
+  guide:
+    pages_in_guide: Pages in this guide
+    skip_to_contents: Skip to contents of guide
+  html_publication:
+    print_meta_data:
+      available_at: This publication is available at %{url}
+      copyright: "© Crown copyright %{year}"
+      isbn: 'ISBN:'
+      licence_html: 'This publication is licensed under the terms of the Open Government Licence v3.0 except where otherwise stated. To view this licence, visit <a href="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3">nationalarchives.gov.uk/doc/open-government-licence/version/3</a> or write to the Information Policy Team, The National Archives, Kew, London TW9 4DU, or email: <a href="mailto:psi@nationalarchives.gov.uk">psi@nationalarchives.gov.uk</a>.'
+      third_party: Where we have identified any third party copyright information you will need to obtain permission from the copyright holders concerned.
+  i18n:
+    direction: ltr
+  language_names:
+    ar: Arabic
+    az: Azeri
+    be: Belarusian
+    bg: Bulgarian
+    bn: Bangla
+    cs: Czech
+    cy: Welsh
+    da: Danish
+    de: German
+    dr: Dari
+    el: Greek
+    en: English
+    es: Spanish
+    es-419: Latin American Spanish
+    et: Estonian
+    fa: Persian
+    fi: Finish
+    fr: French
+    gd: Irish
+    gu: Gujarati
+    he: Hebrew
+    hi: Hindi
+    hr: Croatian
+    hu: Hungarian
+    hy: Armenian
+    id: Indonesian
+    is: Icelandic
+    it: Italian
+    ja: Japanese
+    ka: Georgian
+    kk: Kazakh
+    ko: Korean
+    lt: Lithuanian
+    lv: Latvian
+    ms: Malay
+    mt: Maltese
+    ne: Nepali
+    nl: Dutch
+    'no': Norwegian
+    pa: Punjabi Gurmukhi
+    pa-pk: Punjabi Shahmukhi
+    pl: Polish
+    ps: Pashto
+    pt: Portuguese
+    ro: Romanian
+    ru: Russian
+    si: Sinhala
+    sk: Slovakian
+    sl: Slovenian
+    so: Somali
+    sq: Albanian
+    sr: Serbian
+    sv: Swedish
+    sw: Swahili
+    ta: Tamil
+    th: Thai
+    tk: Turkmen
+    tr: Turkish
+    uk: Ukrainian
+    ur: Urdu
+    uz: Uzbeki
+    vi: Vietnamese
+    yi: Yiddish
+    zh: Chinese
+    zh-hk: Cantonese
+    zh-tw: Traditional Chinese
+  manuals:
+    breadcrumb_contents: Contents
+    contents_list_breadcrumb_contents: Manual homepage
+    hmrc_manual_type: HMRC internal manual
+    hmrc_title: "%{title}HMRC internal manual"
+    next_page: Next page
+    pages_in_manual_section: Manual section pages
+    previous_page: Previous page
+    search_this_manual: Search this manual
+    see_all_updates: see all updates
+    title: "%{title}Guidance"
+    updated: Updated
+    updates_amendments: published amendments
+    updates_description: List of updates to '%{title}'.
+    updates_page_title: Updates - %{title}
+    updates_title: 'Updates: %{title}'
+  multi_page:
+    next_page: Next
+    previous_page: Previous
+    print_entire_guide: View a printable version of the whole guide
+    printable_version: Printable version
+  publication:
+    details: Details
+    documents:
+      one: Document
+      other: Documents
+  service_sign_in:
+    continue: Continue
+    error:
+      option: Please select an option
+      title: You haven’t selected an option
+  shared:
+    historically_political: This was published under the %{government}
+    webchat:
+      available: Advisers are available to chat.
+      busy: All webchat advisers are busy at the moment.
+      closed: Webchat is closed at the moment.
+      speak_to_adviser: Speak to an adviser now
+      technical_problem: Webchat is unavailable at the moment because of technical problems.
+  specialist_document:
+    pdo_alt_text: The scheme logo is a black stamp with the words Designated Origin UK Protected
+    pgi_alt_text: The scheme logo is a black stamp with the words Geographic Origin UK Protected
+    tsg_alt_text: The scheme logo is a black stamp with the words Traditional Speciality UK Protected
+  speech:
+    delivered_on: Delivered on
+    location: Location
+    written_on: Written on
+  statistics_announcement:
+    cancellation_date: Cancellation date
+    cancelled: Statistics release cancelled
+    changed_date: The release date has been changed
+    forthcoming: These statistics will be released
+    previous_date: Previous date
+    proposed_date: Proposed release
+    reason_for_change: Reason for change
+    release_date: Release date
+  travel_advice:
+    alert_status:
+      avoid_all_but_essential_travel_to_parts_html: The <abbr title="Foreign, Commonwealth and Development Office">FCDO</abbr> advise against all but essential travel to parts of the country.
+      avoid_all_but_essential_travel_to_whole_country_html: The <abbr title="Foreign, Commonwealth and Development Office">FCDO</abbr> advise against all but essential travel to the whole country.
+      avoid_all_travel_to_parts_html: The <abbr title="Foreign, Commonwealth and Development Office">FCDO</abbr> advise against all travel to parts of the country.
+      avoid_all_travel_to_whole_country_html: The <abbr title="Foreign, Commonwealth and Development Office">FCDO</abbr> advise against all travel to the whole country.
+    context: Foreign travel advice
+    pages: Travel advice pages
+    still_current_at: Still current at
+    summary: Summary
+    updated: Updated
+  unpublishing:
+    page_title: No longer available
+    summary: The information on this page has been removed because it was published in error.
+    title: The page you're looking for is no longer available
+  working_group:
+    contact_details: Contact details
+    policies: Policies
