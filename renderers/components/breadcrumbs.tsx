@@ -14,7 +14,7 @@ export const renderBreadcrumbs = (breadcrumbLinks: BreadcrumbLink[]) => {
 const innerList = (breadcrumbLinks: BreadcrumbLink[]) => {
     return breadcrumbLinks.map((b, index) =>
         <li className="govuk-breadcrumbs__list-item" key={index}>
-            <a href={b.path}>{b.title}</a>
+            <a href={b.path} className="govuk-breadcrumbs__link">{b.title}</a>
         </li>
     )
 }
