@@ -4,6 +4,8 @@ import { renderTopicalEvent } from './renderers/topical-event.js';
 import { renderSpeech } from './renderers/speech.js';
 import { Schema as CaseStudySchema} from './compiled-schemas/case_study';
 import { Links as SpeechSchemaLinks } from './compiled-schemas/links/speech_links';
+import { Links as TopicalEventSchemaLinks } from './compiled-schemas/links/topical_event_links';
+import { Links as CaseStudySchemaLinks } from './compiled-schemas/links/case_study_links';
 import { Schema as TopicalEventSchema } from './compiled-schemas/topical_event';
 import { Schema as SpeechSchema } from './compiled-schemas/speech';
 import { renderPage } from "./renderers/renderPage.js"
@@ -41,10 +43,15 @@ export const renderIndex = () => {
 export const renderBasedOnSchema = async (path: String) => {
   const json = await fetch(`https://www.gov.uk/api/content/${path}`).then(resp => resp.json());
   const schemaName = json["schema_name"]
-  const schemaNamesToRenderFunctions = {
-      "topical_event": renderTopicalEvent(json as TopicalEventSchema ),
-      "case_study": renderCaseStudy(json as CaseStudySchema),
-      "speech": renderSpeech(json as SpeechSchema, json as SpeechSchemaLinks)
-  };  
-  if (schemaName in schemaNamesToRenderFunctions) { return schemaNamesToRenderFunctions[schemaName] } else { return renderNotFound(schemaName) }
+
+  switch (schemaName) {
+    case "topical_event":
+        return renderTopicalEvent(json as TopicalEventSchema)
+    case "speech":
+        return renderSpeech(json as SpeechSchema, json as SpeechSchemaLinks)
+    case "case_study":
+        return renderCaseStudy(json as CaseStudySchema)
+    default:
+        return renderNotFound(schemaName)
+}
 }

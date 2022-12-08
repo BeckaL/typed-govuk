@@ -34,7 +34,7 @@ const body = (contentItem: SpeechSchema) => {
         {image(contentItem)}
         {renderGovspeakElem(contentItem.details.body)}
       </div>
-      <div class="app-c-published-dates" lang="en">Published {displayableDate(contentItem.details.delivered_on)}</div>
+      <div className="app-c-published-dates" lang="en">Published {displayableDate(contentItem.details.delivered_on)}</div>
     </div>
   </div>)
 }
@@ -101,13 +101,13 @@ const relatedTopics = (links: SpeechSchemaLinks) => {
   if (taxons.length == 0) {
     return <></>
   } else {
-    return <div class="govuk-grid-row">
-      <div class="govuk-grid-column-two-thirds">
-        <div class="gem-c-contextual-footer">
-          <div class="gem-c-related-navigation">
-            <nav role="navigation" class="gem-c-related-navigation__nav-section" aria-labelledby="related-nav-topics-0d47e26a" data-module="gem-toggle" data-gem-toggle-module-started="true">
-              <h2 id="related-nav-topics-0d47e26a" class="gem-c-related-navigation__sub-heading gem-c-related-navigation__sub-heading--footer" data-track-count="footerRelatedItemSection">Explore the topic</h2>
-              <ul class="gem-c-related-navigation__link-list" data-module="gem-track-click" data-gem-track-click-module-started="true">
+    return <div className="govuk-grid-row">
+      <div className="govuk-grid-column-two-thirds">
+        <div className="gem-c-contextual-footer">
+          <div className="gem-c-related-navigation">
+            <nav role="navigation" className="gem-c-related-navigation__nav-section" aria-labelledby="related-nav-topics-0d47e26a" data-module="gem-toggle" data-gem-toggle-module-started="true">
+              <h2 id="related-nav-topics-0d47e26a" className="gem-c-related-navigation__sub-heading gem-c-related-navigation__sub-heading--footer" data-track-count="footerRelatedItemSection">Explore the topic</h2>
+              <ul className="gem-c-related-navigation__link-list" data-module="gem-track-click" data-gem-track-click-module-started="true">
                 {relatedTaxons(taxons)}
               </ul>
             </nav>
@@ -120,9 +120,9 @@ const relatedTopics = (links: SpeechSchemaLinks) => {
 
 const relatedTaxons = (taxons: Object[]) => {
   return taxons.map(taxonObject =>
-    <li class="gem-c-related-navigation__link">
+    <li className="gem-c-related-navigation__link">
       <a
-        class="govuk-link govuk-link gem-c-related-navigation__section-link govuk-link gem-c-related-navigation__section-link--footer"
+        className="govuk-link govuk-link gem-c-related-navigation__section-link govuk-link gem-c-related-navigation__section-link--footer"
         href={taxonObject["base_path"]}
       >{taxonObject["title"]}</a>
     </li>
