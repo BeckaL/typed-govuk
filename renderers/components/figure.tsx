@@ -1,4 +1,3 @@
-
 import * as React from 'react';
 
 export const renderFigure = (src: string, alt: string, caption?: string, credit?: string) => {

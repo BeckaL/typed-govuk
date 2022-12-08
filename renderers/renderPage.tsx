@@ -2,6 +2,7 @@ import { header } from "./components/header.js"
 import { footer } from "./components/footer.js"
 import * as React from 'react'
 import { renderToStaticMarkup } from "react-dom/server";
+import { feedback } from "./components/feedback.js";
 
 export const renderPage = (page) => {
     const applicationStylesheet = "https://www.gov.uk/assets/static/application-2ff816c36affa8947857ec173cb86a848ca6559ef267a9245df61d2aa326f2df.css"
@@ -32,6 +33,7 @@ export const renderPage = (page) => {
                   { page }
                 </main>
               </div>
+              { feedback() }
               { footer() }
              </body>
           </html>

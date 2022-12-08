@@ -79,7 +79,7 @@ const metadata = (contentItem: SpeechSchema, links: SpeechSchemaLinks) => {
               </a>
             </dd>
             <dt className="gem-c-metadata__term">Published</dt>
-            <dd className="gem-c-metadata__definition">{displayableDate(contentItem.first_published_at)}</dd>
+            <dd className="gem-c-metadata__definition">{displayableDate(contentItem.first_published_at!)}</dd>
           </dl>
         </div>
       </div>
