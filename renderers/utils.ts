@@ -38,3 +38,5 @@ export const taxonBreadcrumbs = (taxonTree: Taxon, breadcrumbs: BreadcrumbLink[]
     return newBreadcrumbs.concat({title: "Home", path: "/"}).reverse()
   }
 }
+
+export const parameterize = (string: string): string => string.toLowerCase().split(" ").join("_")
