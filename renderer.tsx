@@ -7,19 +7,7 @@ import { Schema as TopicalEventSchema } from './compiled-schemas/topical_event';
 import { renderCaseStudy } from './renderers/pages/case-study.js';
 import { renderNotFound } from './renderers/pages/not-found.js';
 import { renderSpeech } from './renderers/pages/speech.js';
-import { renderPage } from "./renderers/renderPage.js";
 import { renderTopicalEvent } from './renderers/pages/topical-event.js';
-
-export const renderIndex = () => {
-  return renderPage(
-    <div>
-      <h1 className="govuk-heading-xl">Have a look at some example rendered schemas:</h1>
-      <p><a href='/government/topical-events/budget-2021'>Topical event</a></p>
-      <p><a href='/government/case-studies/smartsurvey-working-with-department-for-education'>Case study</a></p>
-      <p><a href='/government/speeches/deadline-extended-for-the-a1-northumberland-morpeth-to-ellingham-dco-decision'>Speech</a></p>
-    </div>
-  )
-}
 
 export const renderBasedOnSchema = async (path: String) => {
   const json = await fetch(`https://www.gov.uk/api/content/${path}`).then(resp => resp.json());
