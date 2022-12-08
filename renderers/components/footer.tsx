@@ -1,6 +1,6 @@
 import * as React from 'react';
+import { Navigationlink2 } from '../../compiled-translations/en';
 import { getNavLinks } from '../utils.js';
-import { NavigationLink, NavigationLinkItem } from '../../model/NavigationLinks.js';
 
 export const footer = () => {
     return <footer className="gem-c-layout-footer govuk-footer gem-c-layout-footer--border">
@@ -12,12 +12,12 @@ export const footer = () => {
     </footer>
 }
 
-const navigationLinksDiv = (links: NavigationLink[]) => {
+const navigationLinksDiv = (links: Navigationlink2[]) => {
     return React.Children.toArray(links.map( l => 
         <div className={ `${columnWidthClass(columnNo(l.label))}  govuk-!-display-none-print` }>
             <h2 className="govuk-footer__heading govuk-heading-m">{l.label}</h2>
             <ul className={ listClasses(columnNo(l.label)) }>
-                { React.Children.toArray(l.menu_contents.map( (i: NavigationLinkItem ) => 
+                { React.Children.toArray(l.menu_contents.map(i => 
                     <li className="govuk-footer__list-item">
                         <a href={ i.href } className="govuk-footer__link">{ i.label }</a>
                     </li>
