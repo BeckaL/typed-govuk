@@ -1,12 +1,12 @@
 export type NavigationLinkItem = {
-    label: String,
-    href: String
+    label: string,
+    href: string
 }
 
 export type NavigationLink = {
-    label: String,
-    description: String,
-    href: String,
+    label: string,
+    description: string,
+    href: string,
     menu_contents: NavigationLinkItem[]
 }
 

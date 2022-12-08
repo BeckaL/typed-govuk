@@ -173,4 +173,3 @@ export const header = () => {
     <div className="gem-c-layout-for-public__blue-bar govuk-width-container"></div>
   </>
 }
-

@@ -13,7 +13,7 @@ const renderNavLink = (link: NavigationLink, index: number) => {
     const showMenuText = false; //TODO
     const hideMenuText = false; //TODO
 
-    return <li className={liClasses}>
+    return <li className={liClasses.join(" ")}>
         <div className="gem-c-layout-super-navigation-header__navigation-toggle-wrapper govuk-clearfix">
             <a href={link.href} className="gem-c-layout-super-navigation-header__navigation-item-link">
                 <span className="gem-c-layout-super-navigation-header__navigation-item-link-inner">{link.label}</span>

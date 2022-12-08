@@ -29,7 +29,7 @@ const navigationLinksDiv = (links: NavigationLink[]) => {
 
 const columnNo = (title: String): number => (title === "Topics")? 2 : 1
 
-const listClasses = (noOfColumns: number): String => `govuk-footer__list govuk-footer__list--columns-${noOfColumns}}`
+const listClasses = (noOfColumns: number): string => `govuk-footer__list govuk-footer__list--columns-${noOfColumns}}`
 
 const columnWidthClass= (noOfColumns: number): string => {
     switch (noOfColumns) {
