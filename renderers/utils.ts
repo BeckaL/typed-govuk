@@ -40,3 +40,7 @@ export const taxonBreadcrumbs = (taxonTree: Taxon, breadcrumbs: BreadcrumbLink[]
 }
 
 export const parameterize = (string: string): string => string.toLowerCase().split(" ").join("_")
+
+export const truncate = (string: string, to: number) => 
+  string.length > to? string.slice(0, 157) + "..." : string 
+

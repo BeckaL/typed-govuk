@@ -1,7 +1,8 @@
 import * as React from 'react';
 
 import { Schema as CaseStudySchema } from './compiled-schemas/case_study';
-import { Links as SpeechSchemaLinks } from './compiled-schemas/links/speech_links';
+import { Links as SpeechLinks } from './compiled-schemas/links/speech_links';
+import { Links as TopicalEventLinks } from './compiled-schemas/links/topical_event_links';
 import { Schema as SpeechSchema } from './compiled-schemas/speech';
 import { Schema as TopicalEventSchema } from './compiled-schemas/topical_event';
 import { renderCaseStudy } from './renderers/pages/case-study.js';
@@ -15,9 +16,9 @@ export const renderBasedOnSchema = async (path: String) => {
 
   switch (schemaName) {
     case "topical_event":
-      return renderTopicalEvent(json as TopicalEventSchema)
+      return renderTopicalEvent(json as TopicalEventSchema, json as TopicalEventLinks)
     case "speech":
-      return renderSpeech(json as SpeechSchema, json as SpeechSchemaLinks)
+      return renderSpeech(json as SpeechSchema, json as SpeechLinks)
     case "case_study":
       return renderCaseStudy(json as CaseStudySchema)
     default:
