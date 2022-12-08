@@ -10,26 +10,34 @@ import { toTitleCase, displayableDate } from './utils.js'
 export const renderSpeech = (contentItem: SpeechSchema, links: SpeechSchemaLinks) => {
   return renderPage((
     <div>
-      { title(contentItem.title, toTitleCase(contentItem.document_type)) }
-      <div className="gem-c-lead-paragraph"><p>{ contentItem.description }</p></div>
-      { metadata(contentItem, links) }
-      { body(contentItem) }
+      <div className="govuk-grid-row">
+        {title(contentItem.title, toTitleCase(contentItem.document_type))}
+        <div className="govuk-grid-column-two-thirds">
+          <div className="gem-c-lead-paragraph">
+            <p>{contentItem.description}</p>
+          </div>
+        </div>
+        {metadata(contentItem, links)}
+        {body(contentItem)}
+        {relatedTopics((contentItem))}
+      </div>
     </div>
   ))
 }
 
 const body = (contentItem: SpeechSchema) => {
   return (<div className="govuk-grid-row">
-        <div className="govuk-grid-column-two-thirds">
-          <div className="content-bottom-margin"></div>
-          <div className="responsive-bottom-margin">
-            {locationAndDeliveredOn(contentItem.details.delivered_on, contentItem.details.location)}
-            {image(contentItem)}
-            {renderGovspeakElem(contentItem.details.body)}
-          </div>
-        </div>
-      </div>)
-} 
+    <div className="govuk-grid-column-two-thirds">
+      <div className="content-bottom-margin"></div>
+      <div className="responsive-bottom-margin">
+        {locationAndDeliveredOn(contentItem.details.delivered_on, contentItem.details.location)}
+        {image(contentItem)}
+        {renderGovspeakElem(contentItem.details.body)}
+      </div>
+      <div class="app-c-published-dates" lang="en">Published {displayableDate(contentItem.details.delivered_on)}</div>
+    </div>
+  </div>)
+}
 
 const locationAndDeliveredOn = (deliveredOn: string, location?: string) => {
   if (location != undefined) {
@@ -68,12 +76,12 @@ const metadata = (contentItem: SpeechSchema, links: SpeechSchemaLinks) => {
           <dl >
             <dt className="gem-c-metadata__term">From:</dt>
             <dd className="gem-c-metadata__definition">
-              <a className="govuk-link" 
-              href={(links.links.original_primary_publishing_organisation[0] as Object)["base_path"]}>
+              <a className="govuk-link"
+                href={(links.links.original_primary_publishing_organisation[0] as Object)["base_path"]}>
                 {(links.links.original_primary_publishing_organisation[0] as Object)["title"]}
-                </a> and <a className="govuk-link" href={(links.links.people[0] as Object)["base_path"]}>
+              </a> and <a className="govuk-link" href={(links.links.people[0] as Object)["base_path"]}>
                 {(links.links.people[0] as Object)["title"]}
-                  </a>
+              </a>
             </dd>
             <dt className="gem-c-metadata__term">Published</dt>
             <dd className="gem-c-metadata__definition">{displayableDate(contentItem.first_published_at)}</dd>
@@ -84,4 +92,39 @@ const metadata = (contentItem: SpeechSchema, links: SpeechSchemaLinks) => {
       </div>
     </div>
   </div>
+
+
+}
+
+const relatedTopics = (links: SpeechSchemaLinks) => {
+  const taxons = links.links.taxons.map(t => t as Object)
+  if (taxons.length == 0) {
+    return <></>
+  } else {
+    return <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
+        <div class="gem-c-contextual-footer">
+          <div class="gem-c-related-navigation">
+            <nav role="navigation" class="gem-c-related-navigation__nav-section" aria-labelledby="related-nav-topics-0d47e26a" data-module="gem-toggle" data-gem-toggle-module-started="true">
+              <h2 id="related-nav-topics-0d47e26a" class="gem-c-related-navigation__sub-heading gem-c-related-navigation__sub-heading--footer" data-track-count="footerRelatedItemSection">Explore the topic</h2>
+              <ul class="gem-c-related-navigation__link-list" data-module="gem-track-click" data-gem-track-click-module-started="true">
+                {relatedTaxons(taxons)}
+              </ul>
+            </nav>
+          </div>
+        </div>
+      </div>
+    </div>
+  }
+}
+
+const relatedTaxons = (taxons: Object[]) => {
+  return taxons.map(taxonObject =>
+    <li class="gem-c-related-navigation__link">
+      <a
+        class="govuk-link govuk-link gem-c-related-navigation__section-link govuk-link gem-c-related-navigation__section-link--footer"
+        href={taxonObject["base_path"]}
+      >{taxonObject["title"]}</a>
+    </li>
+  )
 }
