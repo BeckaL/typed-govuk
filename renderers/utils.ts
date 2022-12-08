@@ -1,8 +1,8 @@
 import { parse } from 'yaml';
 import fs from 'fs';
-import { NavigationLink } from '../model/NavigationLinks';
 import { BreadcrumbLink } from '../model/BreadcrumbLink';
 import { Taxon } from '../model/Taxon';
+import { RootObject as EnTranslation, Navigationlink2 } from '../compiled-translations/en'
 
 export const toTitleCase = (s: String): String => {
   return s.replace(/^[-_]*(.)/, (_, c) => c.toUpperCase())       // Initial char (after -/_)
@@ -18,9 +18,10 @@ export const displayableDate = (dateString: string) => {
   ].join(' ');
 }
 
-export const getNavLinks = (): NavigationLink[] => {
+export const getNavLinks = () => {
   const file = fs.readFileSync('./data/en.yml', 'utf8');
-  return parse(file).en.components.layout_super_navigation_header.navigation_links as NavigationLink[]
+  const translation = parse(file) as EnTranslation
+  return translation.en.components.layout_super_navigation_header.navigation_links
 }
 
 export const taxonBreadcrumbs = (taxonTree: Taxon, breadcrumbs: BreadcrumbLink[] = [], i: number = 0): BreadcrumbLink[] => {

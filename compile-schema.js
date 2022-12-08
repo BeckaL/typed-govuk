@@ -1,5 +1,7 @@
 import { compileFromFile } from 'json-schema-to-typescript';
-import { writeFileSync } from 'fs';
+import JsonToTS from 'json-to-ts';
+import { readFileSync, writeFileSync } from 'fs';
+import { parse as parseYaml } from 'yaml';
 
 const schemaNames = [
     "answer",
@@ -78,6 +80,10 @@ const schemaNames = [
     "worldwide_organisation",
 ]
 
+const translationNames = [
+    "en",
+]
+
 // compile from file
 schemaNames.forEach(name => {
     const fileName = `./publishing-api/content_schemas/dist/formats/${name}/publisher_v2/schema.json`
@@ -90,3 +96,9 @@ schemaNames.forEach(name => {
 
 })
 
+translationNames.forEach(name => {
+    const fileName = `./data/${name}.yml`
+    const writeTo = `./compiled-translations/${name}.d.ts`
+    const yaml = parseYaml(readFileSync(fileName).toString())
+    writeFileSync(writeTo, JsonToTS(yaml).map(line => line.replace(/^interface/, 'export interface')).join("\n"))
+})
