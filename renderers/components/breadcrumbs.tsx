@@ -2,7 +2,7 @@ import * as React from 'react';
 import { BreadcrumbLink } from '../../model/BreadcrumbLink';
 
 export const renderBreadcrumbs = (breadcrumbLinks: BreadcrumbLink[]) => {
-    return <div className="wrapper govuk-width-container">
+    return <div className="gem-c-contextual-breadcrumbs">
         <div className="gem-c-breadcrumbs govuk-breadcrumbs govuk-breadcrumbs--collapse-on-mobile" data-module="gem-track-click">
             <ol className="govuk-breadcrumbs__list">
                 { innerList(breadcrumbLinks) }
