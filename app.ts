@@ -1,4 +1,4 @@
-import { renderBasedOnSchema } from './renderer.js';
+import { renderBasedOnSchema } from './rendering-router.js';
 import { renderIndex } from './renderers/pages/index.js';
 import Koa from 'koa';
 import KoaRouter from 'koa-router';
